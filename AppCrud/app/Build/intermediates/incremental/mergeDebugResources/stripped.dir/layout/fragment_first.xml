@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/backgroud"
+    >
+
+    <!--titulo do projeto-->
+    <!-- Entrada de informação do usuario de e-mail-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text="Cadastro de animes "
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+    <!-- Entrada do nome do Anime -->
+    <EditText
+        android:id="@+id/edt_anime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Anime"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"/>
+
+    <!-- Entrada de episodios -->
+    <EditText
+        android:id="@+id/edt_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Numero de episodios"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="phone"/>
+
+    <!-- ano do Anime -->
+    <Spinner
+        android:id="@+id/spAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:entries="@array/arrayAno"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:visibility="visible" />
+
+    <!--Botão salvar-->
+
+    <Button
+        android:id="@+id/btn_salvar"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="#30ffffff"
+        android:textColor="@color/white"
+        android:text="salvar"
+        android:layout_marginTop="20dp"/>
+
+
+    <!--Barra de progresso-->
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginProgressBar"
+        android:indeterminateTint="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:visibility="invisible"
+        android:layout_marginTop="200dp"/>
+</LinearLayout>
